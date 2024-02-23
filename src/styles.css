@@ -1,0 +1,67 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  @apply bg-very-dark-blue text-white flex h-screen items-center w-full;
+}
+
+main {
+  @apply max-w-md w-full bg-gradient-to-br from-dark-blue to-very-dark-blue md:mx-auto md:p-9 py-9 px-6 rounded-3xl mx-4;
+}
+
+#rating-start img {
+  @apply bg-dark-grey p-4 rounded-full;
+}
+
+#rating-start h1 {
+  @apply text-2xl pt-6;
+}
+
+#rating-start p {
+  @apply pt-4;
+}
+
+#rating-start ul {
+  @apply flex justify-between py-8;
+}
+
+#rating-start li {
+  @apply md:p-5 p-4 bg-dark-blue rounded-full md:w-14 md:h-14 w-12 h-12 leading-4 text-center cursor-pointer hover:bg-light-grey;
+}
+
+#rating-start li.active {
+  @apply bg-orange;
+}
+
+#rating-start button {
+  @apply w-full bg-orange py-2 rounded-2xl text-lg uppercase tracking-widest hover:bg-white hover:text-orange;
+}
+
+#rating-end {
+  @apply hidden;
+}
+
+#rating-end img {
+  @apply mx-auto;
+}
+
+#rating-end img + p {
+  @apply text-orange w-fit mx-auto bg-dark-grey py-2 px-4 rounded-2xl text-center my-4;
+}
+
+#rating-end h1 {
+  @apply text-3xl font-semibold text-center my-6;
+}
+
+#rating-end h1 + p {
+  @apply text-center text-light-grey;
+}
+
+#rating-start.inactive {
+  @apply hidden;
+}
+
+#rating-end.active {
+  @apply block;
+}
